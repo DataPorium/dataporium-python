@@ -5,7 +5,7 @@
     dp = DataPorium(api_key="YOUR_API_KEY")   # or set DATAPORIUM_API_KEY
     print(dp.company_info(symbol="AAPL"))
 
-Documentation: https://github.com/dataporium/dataporium-python
+Documentation: https://github.com/DataPorium/dataporium-python
 API reference:  https://dataporium.tech/api-docs
 """
 from ._version import __version__
