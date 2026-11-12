@@ -184,7 +184,7 @@ See [docs/use-with-ai-assistants-mcp.md](docs/use-with-ai-assistants-mcp.md) for
 ## Other languages
 
 - JavaScript and TypeScript: [dataporium-js](https://github.com/DataPorium/dataporium-js)
-- curl, R, Google Sheets, Excel and plain Python or JavaScript: [dataporium-examples](https://github.com/DataPorium/dataporium-examples)
+- curl, R, Google Sheets, Excel and plain Python or JavaScript: [financial-data-api](https://github.com/DataPorium/financial-data-api)
 
 ## Guides
 
@@ -197,6 +197,17 @@ See [docs/use-with-ai-assistants-mcp.md](docs/use-with-ai-assistants-mcp.md) for
 - [Endpoint reference](docs/endpoints.md)
 
 Runnable scripts are in [examples/](examples).
+
+## Ready-made scripts
+
+Each of these repositories solves one task with this library:
+
+- [stock-price-history-to-csv](https://github.com/DataPorium/stock-price-history-to-csv): daily stock, ETF and crypto prices to CSV
+- [company-financials-to-excel](https://github.com/DataPorium/company-financials-to-excel): income statement, balance sheet and cash flow to Excel
+- [yield-curve-inversion-tracker](https://github.com/DataPorium/yield-curve-inversion-tracker): 10-year minus 2-year Treasury spread and every inversion
+- [inflation-by-category](https://github.com/DataPorium/inflation-by-category): which prices are rising fastest
+- [layoffs-tracker](https://github.com/DataPorium/layoffs-tracker): US layoffs by company, state and industry to CSV
+- [home-price-cut-finder](https://github.com/DataPorium/home-price-cut-finder): homes with the biggest price cuts by ZIP code, city or county
 
 ## Keep your key safe
 
@@ -222,7 +233,7 @@ The tests never call the real API. To refresh the endpoint list after the API ch
 - MCP server: <https://dataporium.tech/mcp>
 - Pricing: <https://dataporium.tech/pricing>
 - JavaScript library: <https://github.com/DataPorium/dataporium-js>
-- Examples in other languages: <https://github.com/DataPorium/dataporium-examples>
+- Examples in other languages: <https://github.com/DataPorium/financial-data-api>
 - Questions: [open an issue](https://github.com/DataPorium/dataporium-python/issues) or write to info@dataporium.tech
 
 ## License and disclaimer
