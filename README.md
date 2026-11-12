@@ -22,7 +22,7 @@ The same data is available to AI assistants through the [DataPorium MCP server](
 ## Install
 
 ```bash
-pip install git+https://github.com/dataporium/dataporium-python.git
+pip install git+https://github.com/DataPorium/dataporium-python.git
 ```
 
 Python 3.10 or newer. The only dependency is `requests`. For DataFrames, also install pandas:
@@ -181,6 +181,11 @@ https://mcp.dataporium.io/mcp
 
 See [docs/use-with-ai-assistants-mcp.md](docs/use-with-ai-assistants-mcp.md) for the setup in each app.
 
+## Other languages
+
+- JavaScript and TypeScript: [dataporium-js](https://github.com/DataPorium/dataporium-js)
+- curl, R, Google Sheets, Excel and plain Python or JavaScript: [dataporium-examples](https://github.com/DataPorium/dataporium-examples)
+
 ## Guides
 
 - [Quick start](docs/quickstart.md)
@@ -202,7 +207,7 @@ Runnable scripts are in [examples/](examples).
 ## Development
 
 ```bash
-git clone https://github.com/dataporium/dataporium-python.git
+git clone https://github.com/DataPorium/dataporium-python.git
 cd dataporium-python
 pip install -e ".[dev,pandas]"
 pytest
@@ -216,7 +221,9 @@ The tests never call the real API. To refresh the endpoint list after the API ch
 - API documentation: <https://dataporium.tech/api-docs>
 - MCP server: <https://dataporium.tech/mcp>
 - Pricing: <https://dataporium.tech/pricing>
-- Questions: [open an issue](https://github.com/dataporium/dataporium-python/issues) or write to info@dataporium.tech
+- JavaScript library: <https://github.com/DataPorium/dataporium-js>
+- Examples in other languages: <https://github.com/DataPorium/dataporium-examples>
+- Questions: [open an issue](https://github.com/DataPorium/dataporium-python/issues) or write to info@dataporium.tech
 
 ## License and disclaimer
 

@@ -35,8 +35,8 @@ dev = ["pytest>=7"]
 [project.urls]
 Homepage = "https://dataporium.tech"
 Documentation = "https://dataporium.tech/api-docs"
-Repository = "https://github.com/dataporium/dataporium-python"
-Issues = "https://github.com/dataporium/dataporium-python/issues"
+Repository = "https://github.com/DataPorium/dataporium-python"
+Issues = "https://github.com/DataPorium/dataporium-python/issues"
 
 [tool.setuptools]
 packages = ["dataporium"]
