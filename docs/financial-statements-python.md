@@ -32,10 +32,10 @@ To ask for one quarter, give the fiscal year and quarter together, or the combin
 
 ```python
 # Fiscal year and quarter
-q2 = dp.income_statements(symbol="AAPL", fiscal_year=2024, fiscal_qtr="Q2")
+q4 = dp.income_statements(symbol="AAPL", fiscal_year=2025, fiscal_qtr="Q4")
 
 # The same period in one parameter
-q2 = dp.income_statements(symbol="AAPL", fiscal_year_qtr="2024Q2")
+q4 = dp.income_statements(symbol="AAPL", fiscal_year_qtr="2025Q4")
 ```
 
 The income statement can also be limited to annual or quarterly periods:
@@ -45,14 +45,14 @@ annual = dp.income_statements(symbol="AAPL", period_type="Annual")
 quarterly = dp.income_statements(symbol="AAPL", period_type="Quarterly")
 ```
 
-Fiscal years are the company's own. Apple's fiscal year, for example, ends in September, so its fiscal Q2 covers January to March.
+Fiscal years are the company's own. Apple's fiscal year, for example, ends in September, so its fiscal Q4 covers July to September.
 
 ## Read the lines of a statement
 
 The answer is a list with one record per period. Each record names the period and holds the lines of the statement:
 
 ```python
-periods = dp.income_statements_summary(symbol="AAPL", fiscal_year_qtr="2024Q2")
+periods = dp.income_statements_summary(symbol="AAPL", fiscal_year_qtr="2025Q4")
 period = periods[0]
 
 print(period["company_name"], period["fiscal_year_qtr"], period["period_end"], period["currency"])
@@ -68,7 +68,7 @@ Each period also carries `data_status`. It is `final`, or `temporary` for a quar
 The balance sheet and cash flow answers follow the same pattern. Print the keys of one record to see the name of the field that holds their lines:
 
 ```python
-record = dp.balance_sheet_statements_summary(symbol="AAPL", fiscal_year_qtr="2024Q2")[0]
+record = dp.balance_sheet_statements_summary(symbol="AAPL", fiscal_year_qtr="2025Q4")[0]
 print(list(record.keys()))
 ```
 
@@ -80,7 +80,7 @@ from dataporium import DataPorium
 dp = DataPorium()
 
 for symbol in ["AAPL", "MSFT", "GOOGL"]:
-    period = dp.income_statements_summary(symbol=symbol, fiscal_year_qtr="2024Q2")[0]
+    period = dp.income_statements_summary(symbol=symbol, fiscal_year_qtr="2025Q4")[0]
     lines = {line["metric"]: line["value"] for line in period["income_statement"]}
     print(symbol, period["period_end"], lines.get("Total Revenue"), lines.get("Net Income"))
 ```
@@ -92,7 +92,7 @@ Fiscal quarters end on different dates for different companies, so check `period
 ```python
 from dataporium import to_frame
 
-frame = to_frame(dp.income_statements_summary(symbol="AAPL", fiscal_year_qtr="2024Q2"), key="income_statement")
+frame = to_frame(dp.income_statements_summary(symbol="AAPL", fiscal_year_qtr="2025Q4"), key="income_statement")
 print(frame[["metric", "value"]])
 ```
 
