@@ -22,7 +22,7 @@ The header is recommended, because a key in a URL can end up in server and proxy
 Install the library and store the key in an environment variable, so it never ends up in your code:
 
 ```bash
-pip install git+https://github.com/dataporium/dataporium-python.git
+pip install git+https://github.com/DataPorium/dataporium-python.git
 
 export DATAPORIUM_API_KEY="YOUR_API_KEY"     # macOS and Linux
 setx DATAPORIUM_API_KEY "YOUR_API_KEY"       # Windows (open a new terminal afterwards)
